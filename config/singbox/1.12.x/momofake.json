@@ -1,8 +1,7 @@
 {
   "dns": {
     "servers": [
-      {"tag": "local", "type": "udp", "server": "202.96.128.86"},
-      {"tag": "dns_direct", "type": "https", "server": "223.5.5.5"},
+      {"tag": "dns_direct", "type": "udp", "server": "202.96.128.86"},
       {"tag": "foreign", "type": "https", "server": "1.1.1.1","detour": "🚀 默认代理"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
@@ -10,6 +9,7 @@
       {"clash_mode": "direct", "server": "dns_direct"},
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
+      {"protocol": "bittorrent","server": "dns_direct"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com","v2ex.com", "linux.do", "nyaa.si"], "server": "foreign"},
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "dns_direct"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
@@ -52,6 +52,7 @@
       {"action": "sniff", "sniffer": ["http", "tls", "quic", "dns"]},
       {"inbound": "dns-in", "action": "hijack-dns"},
       {"ip_is_private": true, "outbound": "🎯 全球直连"},
+      {"protocol": "bittorrent","outbound": "🎯 全球直连"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"domain_keyword": "tongli", "outbound": "TW" },

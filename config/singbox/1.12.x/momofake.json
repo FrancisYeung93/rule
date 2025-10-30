@@ -1,7 +1,7 @@
 {
   "dns": {
     "servers": [
-      {"tag": "dns_direct", "type": "h3", "server": "223.5.5.5","detour":"🎯 全球直连"},
+      {"tag": "dns_direct", "type": "udp", "server": "223.5.5.5"},
       {"tag": "foreign", "type": "https", "server": "1.1.1.1","detour": "🚀 默认代理"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
@@ -10,7 +10,7 @@
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com","v2ex.com", "linux.do", "nyaa.si"], "server": "foreign"},
-      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "dns_direct"},
+      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "dns_direct","strategy": "prefer_ipv6"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",

@@ -1,7 +1,8 @@
 {
   "dns": {
     "servers": [
-      {"tag": "dns_direct", "type": "https", "server": "223.5.5.5"},
+      {"tag": "local", "type": "udp", "server": "202.96.128.86"},
+      {"tag": "dns_direct", "type": "https", "server": "dns.alidns.com", "domain_resolver": "local"},
       {"tag": "foreign", "type": "https", "server": "8.8.8.8","detour": "♻️ 自动选择"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
@@ -10,7 +11,7 @@
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com","v2ex.com", "linux.do", "nyaa.si"], "server": "foreign"},
-      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "dns_direct","strategy": "prefer_ipv6"},
+      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "dns_direct"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
@@ -52,7 +53,6 @@
       {"inbound": "dns-in", "action": "hijack-dns"},
       {"ip_is_private": true, "outbound": "🎯 全球直连"},
       {"source_ip_cidr": "192.168.1.80/32","outbound": "🎯 全球直连"},
-      {"source_ip_cidr": "192.168.1.11/32","outbound": "🎯 全球直连"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"domain_keyword": "tongli", "outbound": "TW" },

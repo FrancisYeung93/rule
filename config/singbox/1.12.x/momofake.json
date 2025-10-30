@@ -1,7 +1,7 @@
 {
   "dns": {
     "servers": [
-      {"tag": "dns_direct", "type": "udp", "server": "202.96.128.86"},
+      {"tag": "dns_direct", "type": "https", "server": "223.5.5.5","detour":"direct"},
       {"tag": "foreign", "type": "https", "server": "1.1.1.1","detour": "🚀 默认代理"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
@@ -55,7 +55,7 @@
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"domain_keyword": "tongli", "outbound": "TW" },
-      {"domain_suffix": [ "v2ex.com", "linux.do", "ajay.app", "returnyoutubedislikeapi.com", "nyaa.si", "getchu.com"], "outbound": "🚀 默认代理" },
+      {"domain_suffix": [ "v2ex.com", "linux.do", "ajay.app", "returnyoutubedislikeapi.com", "nyaa.si", "getchu.com"，“nikke-en.com”，“nikke-kr.com”,"nikke-jp.com"], "outbound": "🚀 默认代理" },
       {"domain_suffix": [ "dmm.co.jp", "p-bandai.jp", "mgstage.com", "prestige-av.com", "sougouwiki.com", "seesaawiki.jp", "amazon.co.jp" ], "outbound": "日本网站" },
       {"domain_suffix": [ "oaifree.com", "guangbomi.com", "bootcss.com", "1panel.top",  "javdb563.com", "jpgoodbuy.com", "12306.rip", "ddys.pro", "dryeung.cn" ], "outbound": "🎯 全球直连" },
       {"rule_set": "geosite-ai", "outbound": "🧠 AI"},

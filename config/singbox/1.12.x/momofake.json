@@ -1,7 +1,7 @@
 {
   "dns": {
     "servers": [
-      {"tag": "dns_direct", "type": "https", "server": "223.5.5.5","detour":"direct"},
+      {"tag": "dns_direct", "type": "https", "server": "223.5.5.5","detour":"🎯 全球直连","strategy": "prefer_ipv6"},
       {"tag": "foreign", "type": "https", "server": "1.1.1.1","detour": "🚀 默认代理"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
@@ -14,7 +14,7 @@
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
-    "strategy": "prefer_ipv4",
+    "strategy": "ipv4_only",
     "independent_cache": true,
     "reverse_mapping": true
   },
@@ -52,6 +52,7 @@
       {"inbound": "dns-in", "action": "hijack-dns"},
       {"ip_is_private": true, "outbound": "🎯 全球直连"},
       {"source_ip_cidr": "192.168.1.80/32","outbound": "🎯 全球直连"},
+      {"source_ip_cidr": "192.168.1.11/32","outbound": "🎯 全球直连"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"domain_keyword": "tongli", "outbound": "TW" },

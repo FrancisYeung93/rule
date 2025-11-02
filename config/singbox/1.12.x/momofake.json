@@ -12,11 +12,11 @@
       {"query_type": "HTTPS", "action": "reject"},
       {"rule_set": "geosite-dnsblock","action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com","v2ex.com", "linux.do", "nyaa.si"], "server": "foreign"},
-      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "dns_direct"},
+      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "dns_direct","strategy": "prefer_ipv6"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
-    "strategy": "prefer_ipv6",
+    "strategy": "prefer_ipv4",
     "independent_cache": true,
     "reverse_mapping": true
   },

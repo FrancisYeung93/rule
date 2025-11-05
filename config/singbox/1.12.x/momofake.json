@@ -8,8 +8,8 @@
     ],
     "rules": [
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-gamescn","geosite-apple"], "server": "dns_direct","strategy": "prefer_ipv6"},
+      {"domain_suffix": ["12306.rip","dryeung.cn"], "server": "dns_direct","strategy": "prefer_ipv6"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com","v2ex.com", "linux.do", "nyaa.si","theporndb.net"], "server": "foreign"},
-      {"domain_suffix": ["12306.rip","dryeung.cn"], "server": "dns_direct"},
       {"clash_mode": "direct", "server": "dns_direct"},
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
@@ -31,7 +31,7 @@
     {"tag": "🎵 TikTok", "type": "selector", "outbounds": ["🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
     {"tag": "🎥 Netflix", "type": "selector", "outbounds": ["🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
     {"tag": "💶 PayPal", "type": "selector", "outbounds": ["🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择","🎯 全球直连"]},
-    {"tag": "🎮 Steam", "type": "selector", "outbounds": ["🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择"]},
+    {"tag": "🎮 Steam", "type": "selector", "outbounds": ["🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择","🎯 全球直连"]},
     {"tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择","🎯 全球直连"]},
     {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动", "🐸 手动选择","🎯 全球直连"]},
     {"tag": "🍏 Apple", "type": "selector", "outbounds": ["🎯 全球直连", "🇭🇰 香港手动", "🇯🇵 日本手动", "🇸🇬 狮城手动", "🇺🇲 美国手动"]},

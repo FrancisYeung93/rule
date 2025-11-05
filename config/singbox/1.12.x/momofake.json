@@ -14,7 +14,7 @@
       {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"rule_set": "geosite-dnsblock","action": "reject"},
-      {"query_type": ["A"], "server": "fakeip", "rewrite_ttl": 1}
+      {"query_type": ["A","AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
     "strategy": "prefer_ipv4",

@@ -58,6 +58,8 @@
       {"source_ip_cidr": "192.168.1.80/32","outbound": "🎯 全球直连"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
+      {"port":[3478,34567],"outbound": "🎯 全球直连"},
+      {"domain_regex": ["^stun\\..+"],"outbound": "🎯 全球直连"},
       {"domain_keyword": "tongli", "outbound": "TW" },
       {"domain_suffix": [ "javdb.com", "mangacopy.com"], "outbound": "JAV" },
       {"domain_suffix": [ "v2ex.com", "linux.do", "ajay.app", "returnyoutubedislikeapi.com", "nyaa.si", "getchu.com","nikke-en.com","nikke-kr.com","nikke-jp.com"], "outbound": "🚀 默认代理" },

@@ -8,7 +8,7 @@
     ],
     "rules": [
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-gamescn","geosite-apple"], "server": "dns_direct","strategy": "prefer_ipv6"},
-      {"domain_suffix": ["12306.rip","dryeung.cn","cloudflare.com"], "server": "dns_direct","strategy": "prefer_ipv6"},
+      {"domain_suffix": ["12306.rip","dryeung.cn","cloudflare.com","96110.cn.com","cr200j.icu"], "server": "dns_direct","strategy": "prefer_ipv6"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com","v2ex.com", "linux.do", "nyaa.si","theporndb.net"], "server": "foreign"},
       {"clash_mode": "direct", "server": "dns_direct"},
       {"clash_mode": "global", "server": "fakeip"},
@@ -66,7 +66,7 @@
       {"domain_suffix": [ "javdb.com", "mangacopy.com"], "outbound": "JAV" },
       {"domain_suffix": [ "v2ex.com", "linux.do", "ajay.app", "returnyoutubedislikeapi.com", "nyaa.si", "getchu.com","nikke-en.com","nikke-kr.com","nikke-jp.com"], "outbound": "🚀 默认代理" },
       {"domain_suffix": [ "dmm.co.jp", "p-bandai.jp", "mgstage.com", "prestige-av.com", "sougouwiki.com", "seesaawiki.jp", "amazon.co.jp" ], "outbound": "日本网站" },
-      {"domain_suffix": [ "cloudflare.com","oaifree.com", "guangbomi.com", "bootcss.com", "1panel.top",  "javdb563.com", "jpgoodbuy.com", "12306.rip", "ddys.pro", "dryeung.cn" ], "outbound": "🎯 全球直连" },
+      {"domain_suffix": [ "cloudflare.com","oaifree.com", "guangbomi.com", "bootcss.com", "1panel.top",  "javdb563.com", "jpgoodbuy.com", "12306.rip", "ddys.pro", "dryeung.cn","96110.cn.com","cr200j.icu" ], "outbound": "🎯 全球直连" },
       {"rule_set": "geosite-ai", "outbound": "🧠 AI"},
       {"rule_set": "geosite-youtube", "outbound": "📹 YouTube"},
       {"rule_set": "geosite-google", "outbound": "🍀 Google"},

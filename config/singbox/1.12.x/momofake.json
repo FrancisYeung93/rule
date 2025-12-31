@@ -68,7 +68,7 @@
       {"domain_keyword": "tongli", "outbound": "TW" },
       {"domain_suffix": [ "javdb.com", "mangacopy.com"], "outbound": "JAV" },
       {"domain_suffix": [ "v2ex.com", "linux.do", "ajay.app", "returnyoutubedislikeapi.com", "nyaa.si", "getchu.com","nikke-en.com","nikke-kr.com","nikke-jp.com"], "outbound": "🚀 默认代理" },
-      {"domain_suffix": [ "dmm.co.jp", "p-bandai.jp", "mgstage.com", "prestige-av.com", "sougouwiki.com", "seesaawiki.jp", "amazon.co.jp" ], "outbound": "日本网站" },
+      {"domain_suffix": [ "dmm.co.jp", "p-bandai.jp", "mgstage.com", "prestige-av.com", "sougouwiki.com", "seesaawiki.jp", "amazon.co.jp", "web.nhk" ], "outbound": "日本网站" },
       {"domain_suffix": [ "cloudflare.com","oaifree.com", "guangbomi.com", "bootcss.com", "1panel.top",  "javdb563.com", "jpgoodbuy.com", "12306.rip", "ddys.pro", "dryeung.cn","96110.cn.com","cr200j.icu" ], "outbound": "🎯 全球直连" },
       {"rule_set": "geosite-ai", "outbound": "🧠 AI"},
       {"rule_set": "geosite-youtube", "outbound": "📹 YouTube"},

@@ -61,9 +61,9 @@
   "route": {
     "rules": [
       {"action": "sniff"},
+      {"inbound": "dns-in", "action": "hijack-dns"},
       {"ip_is_private": true, "action": "route", "outbound": "🎯 全球直连"},
       {"source_ip_cidr": "192.168.1.80/32", "action": "route", "outbound": "🎯 全球直连"},
-      {"inbound": "dns-in", "action": "hijack-dns"},
       {"protocol": "dns", "action": "hijack-dns"},
       {"clash_mode": "direct", "action": "route", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "action": "route", "outbound": "GLOBAL"},
@@ -158,6 +158,17 @@
       "type": "tproxy",
       "listen": "::",
       "listen_port": 7891
+    },
+    {
+      "tag": "tun-in",
+      "type": "tun",
+      "interface_name": "momo",
+      "address": [
+        "172.31.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": false,
+      "auto_redirect": false
     }
   ],
   "experimental": {
